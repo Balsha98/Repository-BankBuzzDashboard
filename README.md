@@ -82,8 +82,7 @@ Repository-BankBuzzDashboard/
 │   │   │
 │   │   ├── javascript/   # Application logic.
 │   │   │
-│   │   └── media/
-│   │       └── images/   # Icons and UI assets.
+│   │   └── media/        # Icons and UI assets.
 │   │
 │   └── index.html        # Main application page.
 │
