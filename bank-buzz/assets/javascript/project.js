@@ -59,24 +59,24 @@ let valName;
 let valPass;
 let isSorted = false;
 
-const mainDiv = getTagObject("#main_div");
+const mainDiv = getTagObject("#main-div");
 
-const welcomeTxt = getTagObject("#welcome_txt");
-const currentDate = getTagObject("#current_date");
+const welcomeTxt = getTagObject("#welcome-txt");
+const currentDate = getTagObject("#current-date");
 const uObj = getTagObject("#username");
 const pObj = getTagObject("#password");
-const conNameObj = getTagObject("#confirm_name");
-const conPassObj = getTagObject("#confirm_pass");
+const conNameObj = getTagObject("#confirm-name");
+const conPassObj = getTagObject("#confirm-pass");
 
-const transferTo = getTagObject("#send_money_to");
-const transferAmount = getTagObject("#transfer_amount");
-const requestAmount = getTagObject("#request_amount");
+const transferTo = getTagObject("#send-money-to");
+const transferAmount = getTagObject("#transfer-amount");
+const requestAmount = getTagObject("#request-amount");
 
-const currentBalance = getTagObject("#current_balance");
-const transactionsList = getTagObject("#transactions_list");
-const moneyIn = getTagObject("#money_in");
-const moneyOut = getTagObject("#money_out");
-const interestRate = getTagObject("#interest_rate");
+const currentBalance = getTagObject("#current-balance");
+const transactionsList = getTagObject("#transactions-list");
+const moneyIn = getTagObject("#money-in");
+const moneyOut = getTagObject("#money-out");
+const interestRate = getTagObject("#interest-rate");
 
 const sessionTimer = getTagObject("#session");
 
@@ -90,7 +90,7 @@ function getInputValue(inObj) {
 }
 
 function makeAppVisible(opacity) {
-    getTagObject("#main_div").style.opacity = opacity;
+    getTagObject("#main-div").style.opacity = opacity;
 }
 
 function resetInputValues(inType) {
@@ -101,10 +101,10 @@ function resetInputValues(inType) {
             uObj.value = pObj.value = "";
             conNameObj.value = conPassObj.value = "";
             break;
-        case "money_out":
+        case "money-out":
             transferTo.value = transferAmount.value = "";
             break;
-        case "money_in":
+        case "money-in":
             requestAmount.value = "";
             break;
     }
@@ -266,10 +266,10 @@ function displayAccTransactions(currAcc, sort = false) {
         const transactionDiv = `
             <div class="transaction">
                 <div>
-                    <p class="transaction_${tranType}">${i + 1}. ${tranType.toUpperCase()}</p>
-                    <p class="transaction_date">${days}</p>
+                    <p class="transaction-${tranType}">${i + 1}. ${tranType.toUpperCase()}</p>
+                    <p class="transaction-date">${days}</p>
                 </div>
-                <div class="transaction_amount">${intlNumberFormat(accLoc, accCurr, object.transaction)}</div>
+                <div class="transaction-amount">${intlNumberFormat(accLoc, accCurr, object.transaction)}</div>
             </div>
         `;
 
@@ -367,7 +367,7 @@ function inOrOut() {
 function transferMoney() {
     let receiver = transferTo.value;
     let amount = +transferAmount.value;
-    resetInputValues("money_out");
+    resetInputValues("money-out");
 
     if (getInitials(currAcc.owner) === receiver) return;
 
@@ -395,7 +395,7 @@ function transferMoney() {
 
 function requestLoan() {
     let amount = Math.floor(requestAmount.value);
-    resetInputValues("money_in");
+    resetInputValues("money-in");
 
     // Checking whether the
     // loan will be approved,
@@ -415,33 +415,33 @@ function requestLoan() {
 
 // Event Listeners
 // LogIn & LogOut Forms
-getTagObject("#login_form").addEventListener("keypress", (keyPressed) => {
+getTagObject("#login-form").addEventListener("keypress", (keyPressed) => {
     if (keyPressed.key === "Enter") {
         inOrOut();
     }
 });
 
-getTagObject(".logout_form").addEventListener("keypress", (keyPressed) => {
+getTagObject(".logout-form").addEventListener("keypress", (keyPressed) => {
     if (keyPressed.key === "Enter") {
         inOrOut();
     }
 });
 
-for (let btn of ["#in_btn", ".out_btn"]) {
+for (let btn of ["#in-btn", ".out-btn"]) {
     getTagObject(btn).addEventListener("click", inOrOut);
 }
 
 // Transfer Form
-getTagObject(".transfer_form").addEventListener("keypress", (keyPressed) => {
+getTagObject(".transfer-form").addEventListener("keypress", (keyPressed) => {
     if (keyPressed.key === "Enter") {
         transferMoney();
     }
 });
 
-getTagObject(".transfer_btn").addEventListener("click", transferMoney);
+getTagObject(".transfer-btn").addEventListener("click", transferMoney);
 
 // Deposit Form
-getTagObject(".request_form").addEventListener("keypress", (keyPressed) => {
+getTagObject(".request-form").addEventListener("keypress", (keyPressed) => {
     if (keyPressed.key === "Enter") {
         // For some reason, the standalone
         // number input resets the page.
@@ -452,10 +452,10 @@ getTagObject(".request_form").addEventListener("keypress", (keyPressed) => {
     }
 });
 
-getTagObject(".request_btn").addEventListener("click", requestLoan);
+getTagObject(".request-btn").addEventListener("click", requestLoan);
 
 // Sorting Functionality
-getTagObject(".sorting_tag").addEventListener("click", () => {
+getTagObject(".sorting-tag").addEventListener("click", () => {
     // Great suggestion by Jonas! :)
     // He used the not (!) operator in
     // order to switch from true to false,

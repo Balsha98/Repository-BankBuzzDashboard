@@ -383,13 +383,13 @@ console.log(z);
 const randNumArray = Array.from({ length: 100 }, () => Math.trunc(Math.random() * 6 + 1));
 console.log(randNumArray);
 
-document.getElementById("current_balance").addEventListener("click", () => {
+document.getElementById("current-balance").addEventListener("click", () => {
     // When we fetch DOM objects (Nodes), we need to convert them into an array,
     // so that we can then use all of the available Array methods.
     // Using the from() method we're creating an array from a certain structure,
     // and are then mapping it as we wish, using the callback function
     // as the 2nd argument of the Array.from() method.
-    const tranUI1 = Array.from(document.querySelectorAll(".transaction_amount"), (domEl) =>
+    const tranUI1 = Array.from(document.querySelectorAll(".transaction-amount"), (domEl) =>
         Number(domEl.textContent.slice(1))
     );
 

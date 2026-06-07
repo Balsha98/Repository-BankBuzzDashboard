@@ -1,93 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/media/app_icon.png">
-    <title>JS | BankBuzz App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/media/app-icon.png" />
+  <title>JS | BankBuzz App</title>
 </head>
 
 <body>
-    <nav>
-        <p id="welcome_txt">LogIn To Get Started</p>
-        <img src="assets/media/app_logo.png" alt="AppLogo">
-        <form id="login_form">
-            <input type="text" id="username" name="username" placeholder="initials">
-            <input type="password" id="password" name="password" placeholder="password">
-            <label id="in_btn">&#9755;</label>
-        </form>
-    </nav>
-
-    <div id="main_div">
-        <div id="header_div">
-            <div id="balance_div">
-                <p>Current Balance:</p>
-                <p>Date & Time: <span id="current_date"></span></p>
-            </div>
-            <p id="current_balance"></p>
-        </div>
-        <div id="transaction_div">
-            <div id="transactions_list"></div>
-
-            <div id="transfer_div">
-                <h3>Transfer Money</h3>
-
-                <form class="type_forms transfer_form">
-                    <div>
-                        <input type="text" id="send_money_to">
-                        <label>Transfer To</label>
-                    </div>
-                    <div>
-                        <input type="number" id="transfer_amount">
-                        <label>Amount</label>
-                    </div>
-                    <label class="submit_btns transfer_btn"><span>&#9755;</span></label>
-                </form>
-            </div>
-            <div id="request_div">
-                <h3>Request Loan</h3>
-
-                <form class="type_forms request_form">
-                    <div>
-                        <input type="number" id="request_amount">
-                        <label>Amount</label>
-                    </div>
-                    <label class="submit_btns request_btn"><span>&#9755;</span></label>
-                </form>
-            </div>
-            <div id="close_div">
-                <h3>Log Out</h3>
-
-                <form class="type_forms logout_form">
-                    <div>
-                        <input type="text" id="confirm_name">
-                        <label>Username</label>
-                    </div>
-                    <div>
-                        <input type="password" id="confirm_pass">
-                        <label>Password</label>
-                    </div>
-                    <label class="submit_btns out_btn"><span>&#9755;</span></label>
-                </form>
-            </div>
-            <div id="account_data">
-                <p class="money_data">IN&nbsp;&nbsp;&nbsp;<span id="money_in"></span></p>
-                <p class="money_data">OUT&nbsp;&nbsp;&nbsp;<span id="money_out"></span></p>
-                <p class="money_data">INTR&nbsp;&nbsp;&nbsp;<span id="interest_rate"></span></p>
-                <p class="money_data sorting_tag"><span id="sorting_pointer">&#9757;</span> SORT</p>
-            </div>
-            <div id="session_div">
-                <p>Your session ends in: <span id="session"></span></p>
-            </div>
-        </div>
+  <nav>
+    <p id="welcome-txt">LogIn To Get Started</p>
+    <img src="assets/media/app-logo.png" alt="AppLogo" />
+    <form id="login-form">
+      <input type="text" id="username" name="username" placeholder="initials" />
+      <input type="password" id="password" name="password" placeholder="password" />
+      <label id="in-btn">&#9755;</label>
+    </form>
+  </nav>
+  <div id="main-div">
+    <div id="header-div">
+      <div id="balance-div">
+        <p>Current Balance:</p>
+        <p>Date & Time: <span id="current-date"></span></p>
+      </div>
+      <p id="current-balance"></p>
     </div>
+    <div id="transaction-div">
+      <div id="transactions-list"></div>
+      <div id="transfer-div">
+        <h3>Transfer Money</h3>
+        <form class="type-forms transfer-form">
+          <div>
+            <input type="text" id="send-money-to" />
+            <label>Transfer To</label>
+          </div>
+          <div>
+            <input type="number" id="transfer-amount" />
+            <label>Amount</label>
+          </div>
+          <label class="submit-btns transfer-btn"><span>&#9755;</span></label>
+        </form>
+      </div>
+      <div id="request-div">
+        <h3>Request Loan</h3>
+        <form class="type-forms request-form">
+          <div>
+            <input type="number" id="request-amount" />
+            <label>Amount</label>
+          </div>
+          <label class="submit-btns request-btn"><span>&#9755;</span></label>
+        </form>
+      </div>
+      <div id="close-div">
+        <h3>Log Out</h3>
+        <form class="type-forms logout-form">
+          <div>
+            <input type="text" id="confirm-name" />
+            <label>Username</label>
+          </div>
+          <div>
+            <input type="password" id="confirm-pass" />
+            <label>Password</label>
+          </div>
+          <label class="submit-btns out-btn"><span>&#9755;</span></label>
+        </form>
+      </div>
+      <div id="account-data">
+        <p class="money-data">
+          IN&nbsp;&nbsp;&nbsp;<span id="money-in"></span>
+        </p>
+        <p class="money-data">
+          OUT&nbsp;&nbsp;&nbsp;<span id="money-out"></span>
+        </p>
+        <p class="money-data">
+          INTR&nbsp;&nbsp;&nbsp;<span id="interest-rate"></span>
+        </p>
+        <p class="money-data sorting-tag">
+          <span id="sorting-pointer">&#9757;</span> SORT
+        </p>
+      </div>
+      <div id="session-div">
+        <p>Your session ends in: <span id="session"></span></p>
+      </div>
+    </div>
+  </div>
 
-    <script src="assets/javascript/project.js"></script>
-    <script src="assets/javascript/lectures1.js"></script>
-    <script src="assets/javascript/lectures2.js"></script>
-    <script src="assets/javascript/challenges.js"></script>
+  <script src="assets/javascript/project.js"></script>
+  <script src="assets/javascript/lectures1.js"></script>
+  <script src="assets/javascript/lectures2.js"></script>
+  <script src="assets/javascript/challenges.js"></script>
 </body>
 
 </html>

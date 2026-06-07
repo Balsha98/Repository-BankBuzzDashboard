@@ -2,306 +2,306 @@
 
 /* GLOBAL VARIABLES */
 :root {
-    --bodyBg: rgb(224, 224, 224);
-    --hoverColor: rgb(151, 151, 151);
-    --pastelY: rgb(235, 192, 113);
-    --pastelG: rgb(147, 199, 147);
-    --pastelR: rgb(228, 123, 123);
+  --bodyBg: rgb(224, 224, 224);
+  --hoverColor: rgb(151, 151, 151);
+  --pastelY: rgb(235, 192, 113);
+  --pastelG: rgb(147, 199, 147);
+  --pastelR: rgb(228, 123, 123);
 }
 
 /* GLOBAL SELECTORS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins";
-    background-color: var(--bodyBg);
+  font-family: "Poppins";
+  background-color: var(--bodyBg);
 }
 
 /* HEADER STYLE */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
 }
 
-#welcome_txt {
-    min-width: 215px;
-    font-size: 16pt;
+#welcome-txt {
+  min-width: 215px;
+  font-size: 16pt;
 }
 
 form {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #username,
 #password {
-    width: 100px;
-    height: 35px;
-    text-align: center;
-    border: 0px solid var(--bodyBg);
-    box-shadow: 0px 0px 10px var(--hoverColor);
-    border-radius: 25px;
-    opacity: 0.5;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border: 0px solid var(--bodyBg);
+  box-shadow: 0px 0px 10px var(--hoverColor);
+  border-radius: 25px;
+  opacity: 0.5;
 }
 
 #password {
-    margin: 0px 12.5px;
+  margin: 0px 12.5px;
 }
 
-#in_btn {
-    font-size: 24pt;
-    cursor: pointer;
-    transition: all 0.5s;
-    background-color: inherit;
-    border: none;
+#in-btn {
+  font-size: 24pt;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: inherit;
+  border: none;
 }
 
-#in_btn:hover {
-    color: var(--hoverColor);
-    transform: translateX(5px);
+#in-btn:hover {
+  color: var(--hoverColor);
+  transform: translateX(5px);
 }
 
 /* APP STYLE */
-#main_div {
-    width: 1125px;
-    margin: 5px auto;
-    transition: all 1s;
-    opacity: 0;
+#main-div {
+  width: 1125px;
+  margin: 5px auto;
+  transition: all 1s;
+  opacity: 0;
 }
 
 /* 1st ROW STYLE */
-#header_div {
-    display: flex;
-    align-items: last baseline;
-    justify-content: space-between;
+#header-div {
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-between;
 }
 
-#balance_div p:nth-child(1) {
-    font-weight: bold;
+#balance-div p:nth-child(1) {
+  font-weight: bold;
 }
 
-#balance_div p span {
-    all: unset;
+#balance-div p span {
+  all: unset;
 }
 
-#current_balance {
-    font-size: 40pt;
+#current-balance {
+  font-size: 40pt;
 }
 
 /* TRANSACTIONS STYLE */
-#transaction_div {
-    display: grid;
-    gap: 25px;
-    grid-template-columns: 660px 440px;
-    grid-template-rows: 145px 145px 145px 25px;
-    grid-template-areas:
-        "l t"
-        "l r"
-        "l c"
-        "a s";
+#transaction-div {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 660px 440px;
+  grid-template-rows: 145px 145px 145px 25px;
+  grid-template-areas:
+    "l t"
+    "l r"
+    "l c"
+    "a s";
 }
 
-#transaction_div div {
-    border-radius: 10px;
+#transaction-div div {
+  border-radius: 10px;
 }
 
-#transactions_list {
-    padding: 0px 25px;
-    background-color: whitesmoke;
-    box-shadow: 0px 0px 20px var(--hoverColor);
-    overflow-y: scroll;
-    grid-area: l;
+#transactions-list {
+  padding: 0px 25px;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 20px var(--hoverColor);
+  overflow-y: scroll;
+  grid-area: l;
 }
 
-#transactions_list::-webkit-scrollbar {
-    width: 10px;
+#transactions-list::-webkit-scrollbar {
+  width: 10px;
 }
 
-#transactions_list::-webkit-scrollbar-track {
-    background-color: inherit;
-    -webkit-box-shadow: inset 0px 0px 5px var(--hoverColor);
-    border-radius: 10px;
+#transactions-list::-webkit-scrollbar-track {
+  background-color: inherit;
+  -webkit-box-shadow: inset 0px 0px 5px var(--hoverColor);
+  border-radius: 10px;
 }
 
-#transactions_list::-webkit-scrollbar-thumb {
-    background-color: var(--hoverColor);
-    border-radius: 10px;
+#transactions-list::-webkit-scrollbar-thumb {
+  background-color: var(--hoverColor);
+  border-radius: 10px;
 }
 
 .transaction {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
 }
 
 .transaction div p {
-    display: inline;
-    padding: 5px 15px;
-    color: white;
-    border-radius: 15px;
+  display: inline;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 15px;
 }
 
 .transaction div p:nth-child(2) {
-    color: var(--hoverColor);
+  color: var(--hoverColor);
 }
 
-.transaction div .transaction_deposit {
-    background-color: var(--pastelG);
+.transaction div .transaction-deposit {
+  background-color: var(--pastelG);
 }
 
-.transaction div .transaction_withdrawal {
-    background-color: var(--pastelR);
+.transaction div .transaction-withdrawal {
+  background-color: var(--pastelR);
 }
 
-.transaction .transaction_amount {
-    font-size: 14pt;
+.transaction .transaction-amount {
+  font-size: 14pt;
 }
 
-#transfer_div,
-#request_div,
-#close_div {
-    box-shadow: 0px 0px 20px var(--hoverColor);
+#transfer-div,
+#request-div,
+#close-div {
+  box-shadow: 0px 0px 20px var(--hoverColor);
 }
 
-#transfer_div {
-    background-color: var(--pastelY);
-    grid-area: t;
+#transfer-div {
+  background-color: var(--pastelY);
+  grid-area: t;
 }
 
-#request_div {
-    background-color: var(--pastelG);
-    grid-area: r;
+#request-div {
+  background-color: var(--pastelG);
+  grid-area: r;
 }
 
-#close_div {
-    background-color: var(--pastelR);
-    grid-area: c;
+#close-div {
+  background-color: var(--pastelR);
+  grid-area: c;
 }
 
-#transfer_div,
-#request_div,
-#close_div {
-    padding: 25px;
+#transfer-div,
+#request-div,
+#close-div {
+  padding: 25px;
 }
 
 h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.type_forms {
-    display: flex;
+.type-forms {
+  display: flex;
 }
 
-.type_forms div {
-    text-align: center;
+.type-forms div {
+  text-align: center;
 }
 
-.type_forms div input {
-    width: 150px;
-    height: 35px;
-    margin-bottom: 2.5px;
-    text-align: center;
-    background-color: white;
-    border-style: none;
-    border-radius: 5px;
-    opacity: 0.65;
+.type-forms div input {
+  width: 150px;
+  height: 35px;
+  margin-bottom: 2.5px;
+  text-align: center;
+  background-color: white;
+  border-style: none;
+  border-radius: 5px;
+  opacity: 0.65;
 }
 
-.type_forms div:nth-child(2) {
-    margin-left: 12.5px;
+.type-forms div:nth-child(2) {
+  margin-left: 12.5px;
 }
 
-.type_forms div label {
-    display: block;
-    font-weight: bold;
+.type-forms div label {
+  display: block;
+  font-weight: bold;
 }
 
-.type_forms .submit_btns {
-    width: 65px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-start;
-    margin-left: 12.5px;
-    font-size: 18pt;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    transition: all 0.5s;
-    cursor: pointer;
+.type-forms .submit-btns {
+  width: 65px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-left: 12.5px;
+  font-size: 18pt;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.submit_btns:hover {
-    opacity: 0.5;
+.submit-btns:hover {
+  opacity: 0.5;
 }
 
-.submit_btns:hover span {
-    transform: translateX(5px);
+.submit-btns:hover span {
+  transform: translateX(5px);
 }
 
 /* LAST ROW STYLE */
-#account_data {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-area: a;
+#account-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: a;
 }
 
-.money_data {
-    font-size: 10pt;
+.money-data {
+  font-size: 10pt;
 }
 
-#money_in,
-#money_out,
-#interest_rate {
-    font-size: 18pt;
+#money-in,
+#money-out,
+#interest-rate {
+  font-size: 18pt;
 }
 
-#money_in,
-#interest_rate {
-    color: var(--pastelG);
+#money-in,
+#interest-rate {
+  color: var(--pastelG);
 }
 
-#money_out {
-    color: var(--pastelR);
+#money-out {
+  color: var(--pastelR);
 }
 
-.money_data:last-of-type {
-    font-size: 12pt;
-    transition: all 0.3s;
-    cursor: pointer;
+.money-data:last-of-type {
+  font-size: 12pt;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
-.money_data:last-of-type:hover {
-    opacity: 0.5;
+.money-data:last-of-type:hover {
+  opacity: 0.5;
 }
 
-#session_div {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    grid-area: s;
+#session-div {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  grid-area: s;
 }
 
-#session_div p {
-    min-width: 210px;
-    text-align: right;
+#session-div p {
+  min-width: 210px;
+  text-align: right;
 }
 
-#session_div p #session {
-    display: inline-block;
-    min-width: 45px;
-    text-align: inherit;
+#session-div p #session {
+  display: inline-block;
+  min-width: 45px;
+  text-align: inherit;
 }
 
 span {
-    font-weight: bold;
-    transition: all 0.5s;
+  font-weight: bold;
+  transition: all 0.5s;
 }

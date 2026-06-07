@@ -126,7 +126,7 @@ console.log(isEven(8));
 console.log(isEven(23));
 console.log(isEven(81));
 
-document.querySelector("#current_balance").addEventListener("click", function () {
+document.querySelector("#current-balance").addEventListener("click", function () {
     console.log(
         Array.from(document.querySelectorAll(".transaction")).forEach((div, i) => {
             if (i % 2 === 0) {
