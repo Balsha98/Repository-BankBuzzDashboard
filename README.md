@@ -16,7 +16,7 @@ A Vanilla JavaScript banking simulation built as part of Jonas Schmedtmann's Jav
 
 ## Demo
 
-🔗 [Live Demo on Netlify](#) <!-- Add your Netlify link here -->
+🔗 [Live Demo on Netlify](https://mybankbuzz.netlify.app/)
 
 ### Demo Accounts
 
@@ -36,7 +36,7 @@ A Vanilla JavaScript banking simulation built as part of Jonas Schmedtmann's Jav
 ## Course Reference
 
 This project was built as part of:
-📚 [The Complete JavaScript Course 2024 — Jonas Schmedtmann](#) <!-- Add Udemy course link here -->
+📚 [The Complete JavaScript Course 2025 — Jonas Schmedtmann](https://www.udemy.com/course/the-complete-javascript-course/)
 
 ## Installation
 
